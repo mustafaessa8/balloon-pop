@@ -1,0 +1,156 @@
+:root{
+    --primary:#9b8c9c;
+    --bg:rgb(224, 212, 212);
+    --shadow: 2px 0 8px rgba(0,0,0,3);
+    --corners: 6px;
+    --text-color: #3a3838;
+    --light: #fdfdfd;
+}
+
+
+body{
+    background-color: var(--bg) ;
+    font-family: "Permanent Marker" , "cursive";
+    font-size: 16pt;
+    color: var(--text)
+}
+
+
+header{
+    margin: 3em 0;
+
+}
+
+form{
+    margin: 0;
+}
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    outline: none;
+}
+
+button{
+    background-color: var(--primary);
+    color: var(--light);
+    border: 1px solid #3a3838;
+    border-radius: var(--corners);
+    box-shadow: var(--shadow);
+    text-transform: uppercase;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkmagenta;
+}
+
+
+.pumb{
+    margin-top: 80px;
+    height: 130px;
+    width: 180px;
+    position: absolute;
+}
+
+
+.handle{
+    height: 100px;
+    width: 100px;
+    background-color: coral;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: all .2s linear;
+    z-index: 1;
+}
+.handle::before{
+    
+    
+    width: 10px;
+    height: 80px;
+    display: block;
+}
+.pumb:active .handle{
+    top: -20px;
+}
+.pumb-box{
+    background-color: darkkhaki;
+    height: 130px;
+    width: 180px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 20px;
+    z-index: 2;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@keyframes balloon-float {
+    0%, 100% {
+        transform: translate(-25px) rotate(5deg);
+
+    }
+    50%{
+        transform: translate(0px) rotate(-5deg);
+    }
+}
+
+
+
+.logo-container{
+    width: 50%;
+    margin: auto;
+   filter:drop-shadow(var(--shadow));
+}
+
+.bg-dark{
+    background-color: aqua;
+}
+.text-light{
+    color: brown;
+}
+
+main{
+    width: 50%;
+    margin: auto;
+    filter: drop-shadow(var(--corners));
+}
+
+img{
+    max-width: 100%;
+}
+
+.balloon{
+    height: 120px;
+    width: 100px;
+    background-color: blue;
+    border-radius: 50%;
+    transition: all .2s ease;
+    animation: balloon-float 5s ease-in-out infinite;
+    align-self: flex-end;
+    margin: 0 auto;
+    box-shadow: inset -10px -10px 12px red
+
+}
+
+
+.card{
+    background-color: var(--light);
+    padding: 1em;
+    box-shadow: var(--shadow);
+    border-radius: var(--corners);
+
+}
+.text-center{
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
